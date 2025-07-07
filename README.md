@@ -1,10 +1,10 @@
-# 🎨 TimWir Mockup Generator
+# 🎨 Timwir Mockup Generator
 
 > **Professioneller Website-Mockup-Generator für Webdesigner und Agenturen**
 
 Erstelle automatisch hochwertige Monitor-Mockups aus Website-URLs. Perfekt für Präsentationen, Kundenakquise und Portfolio-Darstellungen.
 
-![TimWir Mockup Generator](https://img.shields.io/badge/Version-1.0.0-brightgreen) 
+![Timwir Mockup Generator](https://img.shields.io/badge/Version-1.0.0-brightgreen) 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black) 
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue) 
 ![License](https://img.shields.io/badge/License-MIT-yellow)
