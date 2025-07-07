@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --timwir-green: #008A75;
+  --timwir-green-light: #00A085;
+  --timwir-green-dark: #007066;
+  --timwir-green-accent: #009580;
+  --timwir-blue-light: #2A9D8F;
+  --timwir-teal-dark: #1A7A6B;
+  --timwir-dark: #2D3748;
+  --timwir-gray: #4A5568;
+  --timwir-light-gray: #F7FAFC;
+  --timwir-white: #FFFFFF;
+}
+
+body {
+  color: var(--timwir-dark);
+  min-height: 100vh;
+  background: linear-gradient(340deg, var(--timwir-green), var(--timwir-green-light), var(--timwir-green-accent), var(--timwir-blue-light));
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-white hover:bg-gray-50 text-gray-800 font-semibold py-4 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-white text-white hover:bg-white hover:text-gray-800 font-semibold py-4 px-8 rounded-full transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-6 py-4 border-2 border-white/20 rounded-full bg-white/10 backdrop-blur-sm text-gray-800 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent;
+  }
+  
+  .card {
+    @apply bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 border border-white/20;
+  }
+  
+  .timwir-bg {
+    background: linear-gradient(340deg, var(--timwir-green), var(--timwir-green-light), var(--timwir-green-accent), var(--timwir-blue-light));
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+  }
+  
+
+  
+  .hero-text {
+    @apply text-6xl md:text-7xl font-bold text-white leading-tight;
+  }
+  
+  .hero-subtitle {
+    @apply text-xl md:text-2xl text-white/90 font-light leading-relaxed;
+  }
+}
+
+/* Animierte Gradient Hintergrund */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Sanfte Farbwechsel Animation */
+@keyframes colorShift {
+  0%, 100% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  25% {
+    filter: hue-rotate(5deg) brightness(1.05);
+  }
+  50% {
+    filter: hue-rotate(-3deg) brightness(0.98);
+  }
+  75% {
+    filter: hue-rotate(8deg) brightness(1.02);
+  }
+}
+
+/* Pulsing Effekt für interaktive Elemente */
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+} 
